@@ -7,5 +7,3 @@ if __name__ == '__main__':
     # Open a user interface
     interface.xero_integration().run()
 
-
-# xero-python-oauth2-starter-master

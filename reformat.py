@@ -1,5 +1,7 @@
 import json
 import pandas as pd
+from pathlib import Path
+
 
 def find_in_list_of_list(mylist, char):
     for sub_list in mylist:
@@ -36,7 +38,7 @@ def write_row(worksheet, row_num, row_data, formatting):
         worksheet.write(row_num, ele, row_data[ele], formatting)
 
 def format_in_excel(data, headers):
-    file_name = 'C:/Users/Lucas Wong/Downloads/xero_balance_sheet.xlsx'
+    file_name = str(Path.home() / "Downloads") + '/xero_balance_sheet.xlsx'
     sheet_name1 = "Sheet1"
     col_num = len(data[0]) - 1
 

@@ -15,7 +15,7 @@ from kivy.uix.popup import Popup
 
 
 class display_options(GridLayout):
-    def close_all(self):
+    def close_all(self, instance):
         Window.close()
 
 
@@ -51,11 +51,9 @@ class display_options(GridLayout):
         xero_first_auth()
          
         self.box1.remove_widget(self.confirm_btn)
-        self.confirm_btn = Button(text='Download Excel', on_press=self.get_all_report_types, size_hint=(0.3,1))
+        self.confirm_btn = Button(text='Confirm', on_press=self.get_response_url, size_hint=(0.3,1))
         self.ressult_url = TextInput(hint_text='Paste your response URL ', multiline=False, write_tab=False, size_hint=(0.4, 1))
         self.box1.add_widget(self.ressult_url)
-
-        self.confirm_btn = Button(text='Confirm', on_press=self.get_response_url, size_hint=(0.3,1))
         self.box1.add_widget(self.confirm_btn)
 
 

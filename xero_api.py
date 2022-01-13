@@ -3,6 +3,7 @@ import json
 import webbrowser
 import requests
 import pandas as pd
+from pathlib import Path
 
 from config import CLIENT_ID, CLIENT_SECRET
 from reformat import reformatting_json
@@ -74,7 +75,7 @@ def xero_refresh_token(refresh_token):
     json_response = response.json()
 
     new_refresh_token = json_response['refresh_token']
-    rt_file = open('C:/Users/Lucas Wong/Downloads/refresh_token.txt', 'w')
+    rt_file = open(str(Path.home() / "Downloads") + "/refresh_token.txt", 'w')
     rt_file.write(new_refresh_token)
     rt_file.close()
 
@@ -83,7 +84,7 @@ def xero_refresh_token(refresh_token):
 
 # Call the API
 def xero_request():
-    old_refresh_token = open('C:/Users/Lucas Wong/Downloads/refresh_token.txt', 'r').read()
+    old_refresh_token = open(str(Path.home() / "Downloads") + "/refresh_token.txt", 'r').read()
     new_tokens = xero_refresh_token(old_refresh_token)
     xero_tenant_id = xero_tenants(new_tokens[0])
 
