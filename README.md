@@ -6,9 +6,9 @@ This application used OAuth 2.0 authentication to get accounting data from Xero,
 ### Global installation: 
 (1) Kviy UI (to be replaced by React in future)
 * Please copy the following code and paste them in the terminal:
-* python -m pip install --upgrade pip wheel setuptools
-* python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
-* python -m pip install kivy.deps.gstreamer
+* `python -m pip install --upgrade pip wheel setuptool`
+* `python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew`
+* `python -m pip install kivy.deps.gstreamer`
 
 (2) Pip Version == 9.0.3
 * Please upgrade pip for compatibility
