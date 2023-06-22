@@ -1,32 +1,49 @@
-# xero-python-oauth-starter
+# Xero Python OAuth Starter
 
-This application used OAuth 2.0 authentication to get accounting data from Xero, then re-format them into excel readable files.
+This application uses OAuth 2.0 authentication to extract accounting data from Xero and reformat it into Excel-readable files.
 
 ## Getting Started
-### Global installation: 
-(1) Kviy UI (to be replaced by React in future)
-* Please copy the following code and paste them in the terminal:
-* `python -m pip install --upgrade pip wheel setuptool`
-* `python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew`
-* `python -m pip install kivy.deps.gstreamer`
+### Prerequisites
+(1) **Kivy UI**: This application currently uses Kivy UI. It is planned to be replaced by React in the future.  
 
-(2) Pip Version == 9.0.3
-* Please upgrade pip for compatibility
-* python -m pip install pip==9.0.3 
+Install Kivy UI by running the following commands in your terminal:
+```bash
+python -m pip install --upgrade pip wheel setuptools
+python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+python -m pip install kivy.deps.gstreamer
+```
 
-Remarks:
-Please use python 3.7 or below for implmentation.
-Otherwise, ImportError: cannot import name 'Mapping' from 'collections'.
+(2) **Pip Version 9.0.3**: This application requires Pip version 9.0.3 for compatibility. Upgrade Pip by running:
+```bash
+python -m pip install pip==9.0.3
+```
+
+**Notes:**
+Please use Python 3.7 or below for implementation. Otherwise, you may encounter an ImportError related to the 'Mapping' import from 'collections'.
 
 
 ### Local installation
-* Create new python virtual environment by running `python3 -m venv venv`
-* Activate new virtual environment by running `source venv/bin/activate` (for mac) or `.\venv\Scripts\activate.bat` (for Windows)
-* Install project dependencies by running `pip install -r requirements.txt`
+(1) Create a new Python virtual environment by running: 
+```bash
+python3 -m venv venv
+```  
+(2) Activate the new virtual environment by running: 
+```bash
+source venv/bin/activate`    # For mac
+```
+or 
+```bash
+.\venv\Scripts\activate.bat`   # For Windows  
+```
+(3) Install project dependencies by running
+```bash
+pip install -r requirements.txt
+```
 
 
 ## Configure API keys
-* Create a `config.py` file in the root directory of this project & add the 2 variables
+(1) Create a config.py file in the root directory of this project  
+(2) Add the CLIENT_ID and CLIENT_SECRET variables with their respective values:
 ```python
 CLIENT_ID = "...client id string..."
 CLIENT_SECRET = "...client secret string..."
